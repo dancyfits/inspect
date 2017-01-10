@@ -120,7 +120,7 @@ describe('inline', function() {
   });
 
   // handle the error output
-  it('Should not return if inline style blocks are smaller than 2 kb', function(done) {
+  it('Should not return if inline style blocks are smaller than 24 kb', function(done) {
 
     payload = passmarked.createPayload({
 
