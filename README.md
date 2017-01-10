@@ -18,7 +18,6 @@ The rules checked in this module are:
 * **import** - Returned if @imports were used in any of the CSS files.
 * **inline** - Returned if any inline CSS/Javascript blocks on the page are bigger than 2kb and could be better served in a external file.
 * **order** - Returned if the CSS files are found outside of the head of the file.
-* **protocol** - Returned if the protocol can be removed from the HTML to save some space.
 * **querystring** - Returned if the the page contains any assets with a querystring that could cause problems with proxy servers.
 * **type.attribute** - Returned if any CSS/Javascript assets could have their type attribute remove to save a few bytes.
 
