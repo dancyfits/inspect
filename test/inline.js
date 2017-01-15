@@ -16,7 +16,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, null);
+      }, 
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: null
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, null);
 
     // execute the items
     testFunc(payload, function(err) {
@@ -38,7 +75,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, '');
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: ''
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, '');
 
     // execute the items
     testFunc(payload, function(err) {
@@ -64,7 +138,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, fs.readFileSync(path.join(__dirname, '../samples/inline.styles.head.html')).toString());
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: fs.readFileSync(path.join(__dirname, '../samples/inline.styles.head.html')).toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, fs.readFileSync(path.join(__dirname, '../samples/inline.styles.head.html')).toString());
 
     // execute the items
     testFunc(payload, function(err) {
@@ -95,7 +206,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, fs.readFileSync(path.join(__dirname, '../samples/inline.styles.body.html')).toString());
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: fs.readFileSync(path.join(__dirname, '../samples/inline.styles.body.html')).toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, fs.readFileSync(path.join(__dirname, '../samples/inline.styles.body.html')).toString());
 
     // execute the items
     testFunc(payload, function(err) {
@@ -126,7 +274,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, fs.readFileSync(path.join(__dirname, '../samples/inline.styles.ok.html')).toString());
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: fs.readFileSync(path.join(__dirname, '../samples/inline.styles.ok.html')).toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, fs.readFileSync(path.join(__dirname, '../samples/inline.styles.ok.html')).toString());
 
     // execute the items
     testFunc(payload, function(err) {
@@ -157,7 +342,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, fs.readFileSync(path.join(__dirname, '../samples/inline.styles.missing.html')).toString());
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: fs.readFileSync(path.join(__dirname, '../samples/inline.styles.missing.html')).toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, fs.readFileSync(path.join(__dirname, '../samples/inline.styles.missing.html')).toString());
 
     // execute the items
     testFunc(payload, function(err) {
@@ -193,7 +415,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.head.html')).toString());
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.head.html')).toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.head.html')).toString());
 
     // execute the items
     testFunc(payload, function(err) {
@@ -224,7 +483,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.body.html')).toString());
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.body.html')).toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.body.html')).toString());
 
     // execute the items
     testFunc(payload, function(err) {
@@ -255,7 +551,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.ok.html')).toString());
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.ok.html')).toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.ok.html')).toString());
 
     // execute the items
     testFunc(payload, function(err) {
@@ -286,7 +619,44 @@ describe('inline', function() {
 
         url: 'http://example.com'
 
-      }, {}, fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.missing.html')).toString());
+      }, 
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.missing.html')).toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, fs.readFileSync(path.join(__dirname, '../samples/inline.scripts.missing.html')).toString());
 
     // execute the items
     testFunc(payload, function(err) {

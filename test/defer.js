@@ -15,7 +15,44 @@ describe('defer', function() {
 
         url: 'http://example.com'
 
-      }, {}, null);
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: null
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, null);
 
     // execute the items
     testFunc(payload, function(err) {
@@ -37,7 +74,44 @@ describe('defer', function() {
 
         url: 'http://example.com'
 
-      }, {}, '');
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: ''
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, '');
 
     // execute the items
     testFunc(payload, function(err) {
@@ -63,7 +137,44 @@ describe('defer', function() {
 
         url: 'http://example.com'
         
-      }, null, content.toString())
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: content.toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, content.toString())
 
       // run the rules
       testFunc(payload, function(err) {
@@ -96,7 +207,44 @@ describe('defer', function() {
 
         url: 'http://example.com'
         
-      }, null, content.toString())
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: content.toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, content.toString())
 
       // run the rules
       testFunc(payload, function(err) {
@@ -129,7 +277,44 @@ describe('defer', function() {
 
         url: 'http://example.com'
         
-      }, null, content.toString())
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: content.toString()
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, content.toString())
 
       // run the rules
       testFunc(payload, function(err) {

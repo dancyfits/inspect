@@ -15,7 +15,44 @@ describe('typeattribute', function() {
 
         url: 'http://example.com'
 
-      }, {}, null);
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: null
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, null);
 
     // execute the items
     testFunc(payload, function(err) {
@@ -37,7 +74,44 @@ describe('typeattribute', function() {
 
         url: 'http://example.com'
 
-      }, {}, '');
+      },
+      {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: ''
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, '');
 
     // execute the items
     testFunc(payload, function(err) {
@@ -56,14 +130,51 @@ describe('typeattribute', function() {
   it('Should have the type attribute rule present, even if uppercased', function(done) {
 
     // read in the html sample
-    var content = fs.readFileSync('./samples/typeattribute.bad.html');
+    var content = fs.readFileSync('./samples/typeattribute.bad.html').toString();
 
     // handle the payload
     payload = passmarked.createPayload({
 
       url: 'http://example.com'
       
-    }, null, content.toString())
+    },
+    {
+
+        log: {
+
+          entries: [
+
+            {
+
+              request:  {},
+              response: {
+
+                status: 200,
+                headers: [
+
+                  {
+
+                    name: 'content-type',
+                    value:  'text/html'
+
+                  }
+
+                ],
+                content: {
+
+                  text: content
+
+                }
+
+              }
+
+            }
+
+          ]
+
+        }
+
+      }, content)
 
     // run the rules
     testFunc(payload, function(err) {
@@ -92,14 +203,51 @@ describe('typeattribute', function() {
   it('Should have the type attribute rule present', function(done) {
 
     // read in the html sample
-    var content = fs.readFileSync('./samples/typeattribute.bad.html');
+    var content = fs.readFileSync('./samples/typeattribute.bad.html').toString();
 
     // handle the payload
     payload = passmarked.createPayload({
 
       url: 'http://example.com'
       
-    }, null, content.toString())
+    },
+    {
+
+      log: {
+
+        entries: [
+
+          {
+
+            request:  {},
+            response: {
+
+              status: 200,
+              headers: [
+
+                {
+
+                  name: 'content-type',
+                  value:  'text/html'
+
+                }
+
+              ],
+              content: {
+
+                text: content
+
+              }
+
+            }
+
+          }
+
+        ]
+
+      }
+
+    }, content.toString())
 
     // run the rules
     testFunc(payload, function(err) {
@@ -128,14 +276,51 @@ describe('typeattribute', function() {
   it('Should not have the type attribute rule present', function(done) {
 
     // read in the html sample
-    var content = fs.readFileSync('./samples/typeattribute.ok.html');
+    var content = fs.readFileSync('./samples/typeattribute.ok.html').toString();
 
     // handle the payload
     payload = passmarked.createPayload({
 
       url: 'http://example.com'
         
-    }, null, content.toString())
+    },
+    {
+
+      log: {
+
+        entries: [
+
+          {
+
+            request:  {},
+            response: {
+
+              status: 200,
+              headers: [
+
+                {
+
+                  name: 'content-type',
+                  value:  'text/html'
+
+                }
+
+              ],
+              content: {
+
+                text: content
+
+              }
+
+            }
+
+          }
+
+        ]
+
+      }
+
+    }, content.toString())
 
     // run the rules
     testFunc(payload, function(err) {
@@ -164,14 +349,51 @@ describe('typeattribute', function() {
   it('Should give a error on a page with no such tags', function(done) {
 
     // read in the html sample
-    var content = fs.readFileSync('./samples/typeattribute.missing.html');
+    var content = fs.readFileSync('./samples/typeattribute.missing.html').toString();
 
     // handle the payload
     payload = passmarked.createPayload({
 
       url: 'http://example.com'
         
-    }, null, content.toString())
+    },
+    {
+
+      log: {
+
+        entries: [
+
+          {
+
+            request:  {},
+            response: {
+
+              status: 200,
+              headers: [
+
+                {
+
+                  name: 'content-type',
+                  value:  'text/html'
+
+                }
+
+              ],
+              content: {
+
+                text: content
+
+              }
+
+            }
+
+          }
+
+        ]
+
+      }
+
+    }, content.toString())
 
     // run the rules
     testFunc(payload, function(err) {
