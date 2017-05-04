@@ -1,6 +1,6 @@
 {
   "name": "@passmarked/inspect",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Rules that check if any bandwidth can be saved on the pages content",
   "main": "index.js",
   "scripts": {
